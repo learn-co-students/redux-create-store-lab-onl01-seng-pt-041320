@@ -12,12 +12,10 @@ function createStore(reducer) {
     return state;
   }
 
-  return{
+  return {
     getState,
     dispatch
   }
-   
-  
 }
 
 function candyReducer(state = [], action) {
@@ -38,7 +36,7 @@ function render() {
   }
 };
 
-let store = createStore(reducer);
+let store = createStore(candyReducer);
 store.dispatch({ type: '@@INIT' });
 
 
