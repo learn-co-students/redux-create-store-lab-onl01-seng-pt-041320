@@ -1,4 +1,6 @@
 // write your createStore function here
+function createStore() {
+  let state;
 
 function candyReducer(state = [], action) {
   switch (action.type) {
@@ -16,7 +18,9 @@ function render() {
   } else {
     throw new Error("the store's state has not been defined yet")
   }
-};
+}
+const store = createStore(candyReducer)
+}
 
 // Use your createStore function and the functions provided here to create a store.
 // Once the store is created, call an initial dispatch.
